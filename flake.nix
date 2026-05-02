@@ -21,8 +21,9 @@
             fastapi-cli
             pydantic
             uvicorn      # Necessário para rodar o FastAPI
-            psycopg2     # Driver para PostgreSQL
+            asyncpg      # Driver para PostgreSQL
             sqlalchemy   # Comum em stacks FastAPI + Postgres
+            alembic
           ]))
           
           # Ferramentas adicionais
