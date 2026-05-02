@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String
-from app.models.base import Base
+from .base import Base
 
-class User(Base):
+class UserTable(Base):
     __tablename__ = "users"
     
     username: Mapped[str] = mapped_column(String(50), unique=True, nullable=False)
@@ -11,4 +11,4 @@ class User(Base):
     hashed_password: Mapped[str] = mapped_column(String(255), nullable=False)
 
     def __repr__(self) -> str:
-        return f"<User(username={self.username!r}, email={self.email!r})>"
+        return f"<UserTable(username={self.username!r}, email={self.email!r})>"

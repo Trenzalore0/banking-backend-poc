@@ -6,9 +6,9 @@ app = FastAPI(
     version="1.0.0"
 )
 
-from app.api.v1.base import router as v1_router
-from app.api.admin.base import router as admin_router
+import api.v1.base as v1_router
+import api.admin.base as admin_router
 
-app.include_router(v1_router)
-app.include_router(admin_router)
+app.include_router(v1_router.router)
+app.include_router(admin_router.router)
 

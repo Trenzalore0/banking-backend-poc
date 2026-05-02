@@ -6,7 +6,8 @@ class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     pass
 
-from .user import User
-from .country import Country
-from .currency import Currency
 
+#from .user import User
+#from .country import Country
+#from .currency import Currency
+#from .balance import Balance

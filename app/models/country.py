@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String
-from app.models.base import Base
+from .base import Base
 
-class Country(Base):
+class CountryTable(Base):
     __tablename__ = "countries"
     
     name: Mapped[str] = mapped_column(String(100), unique=True, nullable=False)
@@ -10,4 +10,4 @@ class Country(Base):
     image_base64: Mapped[str | None] = mapped_column(String(1000))
 
     def __repr__(self) -> str:
-        return f"<Country(name={self.name!r}, code={self.code!r})>"
+        return f"<CountryTable(name={self.name!r}, code={self.code!r})>"

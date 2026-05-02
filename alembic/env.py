@@ -21,7 +21,15 @@ if config.config_file_name is not None:
 
 # add your model's MetaData object here
 from app.models.base import Base
+
+import app.models.user
+import app.models.country 
+import app.models.currency 
+import app.models.balance
+
 target_metadata = Base.metadata
+
+# print(f"Tabelas detectadas: {target_metadata.tables.keys()}") # Debug: Verificar se as tabelas estão sendo detectadas corretamente
 
 # database url config
 database_url = os.getenv("DATABASE_URL")

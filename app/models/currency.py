@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import String
-from app.models.base import Base
+from .base import Base
 
-class Currency(Base):
+class CurrencyTable(Base):
     __tablename__ = "currencies"
 
     country_id: Mapped[int] = mapped_column(nullable=False)
@@ -11,4 +11,4 @@ class Currency(Base):
     symbol: Mapped[str] = mapped_column(String(10), nullable=False)
 
     def __repr__(self) -> str:
-        return f"<Currency(name={self.name!r}, code={self.code!r})>"
+        return f"<CurrencyTable(name={self.name!r}, code={self.code!r})>"
